@@ -7,7 +7,7 @@ Pengguna utama aplikasi ini adalah **dosen** yang harus login terlebih dahulu me
 
 ## Fitur
 
-- Login dengan ID dan password
+- Login dengan ID dan password (dosen01 dan password123)
 - Halaman utama (landing page) setelah login berhasil
 - Antarmuka grafis yang sederhana dan mudah digunakan
 
@@ -15,7 +15,7 @@ Pengguna utama aplikasi ini adalah **dosen** yang harus login terlebih dahulu me
 
 ## Cara Menjalankan
 
-1. Sdah punya **Java JDK** versi 8 atau lebih baru.
+1. Sudah punya **Java JDK** versi 8 atau lebih baru.
 2. Clone repository ini:
 
    ```bash
