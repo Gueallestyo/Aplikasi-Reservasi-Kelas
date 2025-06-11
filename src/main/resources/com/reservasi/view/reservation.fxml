@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.reservasi.controller.ReservationController">
+    <children>
+        <Label text="Aplikasi Reservasi Kelas" textFill="#2a56c6">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+            <VBox.margin>
+                <Insets top="20.0" />
+            </VBox.margin>
+        </Label>
+        <VBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+            <Label text="Hari" />
+            <ComboBox fx:id="hariComboBox" prefWidth="200.0" />
+            <Label text="Jam ke-" />
+            <ComboBox fx:id="jamComboBox" prefWidth="200.0" />
+            <Label text="Kelas" />
+            <ComboBox fx:id="kelasComboBox" prefWidth="200.0" />
+        </VBox>
+        <HBox alignment="CENTER" spacing="20.0">
+            <Button fx:id="reservasiButton" mnemonicParsing="false" onAction="#handleReservasi" text="Buat Reservasi" />
+            <Button fx:id="cekKetersediaanButton" mnemonicParsing="false" onAction="#handleCekKetersediaan" text="Cek Ketersediaan" />
+            <Button mnemonicParsing="false" onAction="#handleKembali" text="Kembali" />
+        </HBox>
+        <TextArea fx:id="hasilTextArea" editable="false" prefHeight="300.0" prefWidth="600.0" wrapText="true" />
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
