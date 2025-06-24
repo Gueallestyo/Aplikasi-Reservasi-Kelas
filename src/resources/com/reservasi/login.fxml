@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yourcompany.reservasi.controller.LoginController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label text="Selamat Datang">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+    <Label text="Aplikasi Reservasi Ruang Kelas">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+    <GridPane hgap="10.0" vgap="10.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <Label text="ID Dosen / NIP:" GridPane.rowIndex="0" />
+        <TextField fx:id="usernameField" promptText="Masukkan ID/NIP" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label text="Password:" GridPane.rowIndex="1" />
+        <PasswordField fx:id="passwordField" promptText="Masukkan Password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    </GridPane>
+    <Button onAction="#handleLoginButton" text="Login" />
+    <Label fx:id="messageLabel" textFill="RED" />
+</VBox>

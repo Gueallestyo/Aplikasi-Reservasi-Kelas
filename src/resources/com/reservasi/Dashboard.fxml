@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yourcompany.reservasi.controller.DashboardController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="150.0" style="-fx-background-color: #f0f0f0;">
+         <children>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="150.0" text="Menu" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#handleHomeButton" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: transparent;" text="Home">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#handleLogoutButton" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: transparent;" text="Logout">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="650.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Label text="Pesan Kelas">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <GridPane hgap="10.0" vgap="10.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Mata Kuliah:" GridPane.rowIndex="0" />
+                  <ComboBox fx:id="mataKuliahComboBox" prefWidth="250.0" promptText="Pilih Mata Kuliah" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                  <Label text="Kelas:" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="kelasComboBox" prefWidth="250.0" promptText="Pilih Kelas" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Jam Perkuliahan:" GridPane.rowIndex="2" />
+                  <HBox alignment="CENTER_LEFT" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <ComboBox fx:id="jamMulaiComboBox" prefWidth="120.0" promptText="Jam Mulai" />
+                        <Label text="-" />
+                        <ComboBox fx:id="jamAkhirComboBox" prefWidth="120.0" promptText="Jam Akhir" />
+                     </children>
+                  </HBox>
+                  <Label text="Ruang Kelas:" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="ruangKelasComboBox" prefWidth="250.0" promptText="Pilih Ruang Kelas" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Tanggal:" GridPane.rowIndex="4" />
+                  <DatePicker fx:id="tanggalDatePicker" prefWidth="250.0" promptText="Pilih Tanggal" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               </children>
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin>
+            </GridPane>
+            <Button mnemonicParsing="false" onAction="#handlePesanKelasButton" text="Pesan" />
+            <Label fx:id="statusLabel" textFill="BLUE" />
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </Separator>
+            <Label text="Daftar Reservasi Anda">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <TableView fx:id="reservasiTableView" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="mkCol" prefWidth="150.0" text="Mata Kuliah" />
+                <TableColumn fx:id="kelasCol" prefWidth="75.0" text="Kelas" />
+                  <TableColumn fx:id="jamCol" prefWidth="100.0" text="Jam" />
+                  <TableColumn fx:id="ruangCol" prefWidth="100.0" text="Ruang" />
+                  <TableColumn fx:id="tanggalCol" prefWidth="100.0" text="Tanggal" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</HBox>

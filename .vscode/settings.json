@@ -1,0 +1,22 @@
+{
+    "java.project.sourcePaths": [
+        "src/main/java"
+    ],
+    "java.project.resourcePaths": [
+        "src/main/resources"
+    ],
+
+    "java.vmargs": [
+        "--module-path",
+        "C:/Users/USER/Aplikasii_reservasi/lib/javafx-sdk-21.0.7/lib/",
+        "--add-modules",
+        "javafx.controls,javafx.fxml"
+    ],
+
+    // Penting juga untuk memastikan ini sudah benar agar VS Code bisa menemukan JAR
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "C:/Users/USER/Aplikasii_reservasi/lib/javafx-sdk-21.0.7/lib/*.jar", // <--- SESUAIKAN JALUR INI
+        "C:/Users/USER/Aplikasii_reservasi/lib/sqlite-jdbc-3.8.9.1.jar" // Pastikan path SQLite JDBC juga benar
+    ]
+}
